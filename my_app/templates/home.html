@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="backimg">
+    <nav class="testnav">
+        <p><b>{{current_user.first_name}}  {{current_user.last_name}}</b></p>
+        <button><a href="#">log out</a></button>
+    </nav>
+    <div>
+        
+        <div class="homepage">
+            <p class="hmm">
+                Our mandate is to provide and prudently  manage comprehensive <br>
+                and accessible health, with emphasis on primary healthcare 
+            </p>
+            
+            <form action="" method="POST">
+                {{form.search}}
+                {{form.submit}}
+            </form>
+            <p class="hmp"><a href="{{url_for('ehealth.clienr')}}">Register Client</a></p>
+            <p>OR</p>
+            <p class="hmp"><a href="{{url_for('ehealth.search')}}">Request for service</a></p>
+            <P>
+                Our Motto : Your Health our concern
+            </P>
+        </div>
+    </div>
+</section>
+{% endblock %}

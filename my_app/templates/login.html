@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content%}
+<section>
+   
+    <div class="containerone">
+        <img src="static\images\medical-prescription.png" alt=" sign up" class="imgone">
+        <div class="subdivone">
+            <h5 class="h5one">WELCOME BACK!</h5>
+            <form action="" method="post" class="inputform">
+                <p>
+                   <b>{{ form.email.label }}</b><br>
+                   {{ form.email(size =32, placeholder=form.email.label.text) }}
+                </p>
+                <p>
+                   <b>{{ form.password.label }}</b><br>
+                   {{ form.password(size=32, placeholder=form.password.label.text) }}
+                </p>
+                <br>
+                <p class=" containerbutton">{{ form.submit() }}</p>
+            </form>
+        </div>
+    </div>
+    <p class="regtext">Don't have an account?  <a href="{{ url_for('ehealth.register') }}">Register</a></p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,202 @@
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(226, 216, 216);
+}
+.h5one{
+    text-align: center;
+    color: rgb(45, 145, 106);
+    margin-bottom: 0;
+    margin-left: -10px;
+    font-size: 50px;
+}
+.containerone{
+    padding: 0;
+    margin:60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 1px solid gray;
+    box-shadow: 50px;
+    border-radius: 5px;*/
+    width: 800px;
+    position: relative;
+    left: 220px;
+    gap: 20px;
+}
+
+.imgone{
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    margin: -7px;
+}
+.subdivone{
+    margin: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: first baseline;
+}
+.inputform input{
+    border-radius: 15px;
+    border-color: rgb(45, 145, 106);
+    width: 400px;
+    height: 45px;
+    box-shadow: none;
+}
+.containerbutton input{
+    background-color: rgb(45, 145, 106);
+    color: white;
+    width: 280px;
+    height: 45px;
+    border-radius: 10px;
+    border-color: rgb(45, 145, 106);
+    border: white;
+}
+.regtext{
+    text-align: center;
+    margin-left: -10px;
+}
+.regtext a {
+    color:rgb(45, 145, 106);
+}
+.backimg{
+    background-image: url("../images/home.png");
+    background-position-x: center;
+    background-repeat: no-repeat; 
+    height: 100vh;    
+}
+.testnav{
+    background-color:rgb(45, 145, 106);
+    height: 50px;    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*gap: 50px;*/
+}
+.testnav p{
+    margin-left: -110px;
+    text-align: left;
+    line-height: 10px;
+    color: rgb(226, 216, 216);
+    padding-top: 10px;
+}
+.testnav button {
+    background-color: rgb(226, 216, 216);
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+}
+.testnav button a {
+    color: rgb(45, 145, 106);
+}
+.hmm{
+    text-align: center;
+    padding-top: 40px;
+    /*color: rgb(45, 145, 106);*/
+}
+.search{
+    margin-left: 400px;
+    border: 1px solid  rgb(45, 145, 106);
+    border-radius: 10px;
+    width: 450px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.searchdiv p {
+    text-align: center;
+}
+.searhbuttton{
+    border-radius: 10px;
+    background-color: rgb(45, 145, 106); 
+    color: rgb(226, 216, 216);
+    height: 40px;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.homepage a {
+    text-align: center;
+    color: rgb(45, 145, 106);
+    padding-top: 20px;
+}
+
+.hmp{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+.homepage p{
+    text-align: center;
+}
+.clientsec {
+    display: flex;
+    flex-direction: row;
+}
+.clientnav{
+    background-color: rgb(45, 145, 106);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    height: 100vh;
+    width: 300px;
+}
+.clientnav p {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.clientnav div {
+    padding-top: 100px;
+}
+.clientnav button {
+    background-color: rgb(226, 216, 216);
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+}
+.clientnav button a{
+    color: rgb(45, 145, 106);
+}
+.backpic{
+    background-image: url("../images/doctors.png");
+    background-position: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left: 450px;
+    margin-top:0;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    
+}
+.bigone{
+    padding-bottom: 30px;
+    color: rgb(45, 145, 106);
+    font-size: 35px;
+    text-align: center;
+}
+.Clientform{
+    padding-left: 100px;
+}
+.Clientform input {
+    border-radius: 15px;
+    border-color: rgb(45, 145, 106);
+    width: 450px;
+    height: 45px;
+    box-shadow: none;
+}
+.butsave{
+    color: rgb(226, 216, 216);
+    background-color: rgb(45, 145, 106);
+    font-weight: bold;
+    font-size: 25px;
+    width: 850px;
+}

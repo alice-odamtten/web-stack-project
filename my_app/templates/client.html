@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="clientsec">
+    <nav class="clientnav">
+        <p><b>{{current_user.first_name}}  {{current_user.last_name}}</b></p>
+        <div>
+            <button><a href="{{url_for('ehealth.home')}}">Home</a></button> <br>
+            <br>
+            <button><a href="{{url_for('ehealth.search')}}">Request for service</a></button><br>
+            <br>
+            <button><a href="{{url_for('ehealth.logout')}}">log out</a></button>
+        </div>
+    </nav>
+    <div class="backpic">
+        <p class="bigone"><b>REGISTER CLIENT</b></p>
+        <div>
+            <form action="" method="post" class="Clientform">
+                <p>
+                    <b>{{ form.first_name.label }}</b><br>
+                    {{ form.first_name(size =32) }}
+                </p>
+                <p>
+                    <b>{{ form.last_name.label }}</b><br>
+                    {{ form.last_name(size=32) }}
+                </p>
+                <p>
+                    <b>{{form.opd_number.label}}</b> <br>
+                    {{ form.opd_number(size=32)}}
+                </p>
+                <p>
+                    <b>{{ form.date_of_birth.label }}</b><br>
+                    {{ form.date_of_birth(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.nearest_relative.label }}</b><br>
+                    {{ form.nearest_relative(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.emergency_contact.label }}</b><br>
+                    {{ form.emergency_contact(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.insurance_status.label }}</b><br>
+                    {{ form.insurance_status }}
+                </p>
+                <p>
+                    <b>{{ form.insurance_type.label }}</b><br>
+                    {{ form.insurance_type(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.insurance_number.label }}</b><br>
+                    {{ form.insurance_number(size=32) }}
+                </p>
+                {{form.submit()}}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

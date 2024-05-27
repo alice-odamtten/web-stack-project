@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="clientsec">
+    <nav class="clientnav">
+        <p><b>{{current_user.first_name}}  {{current_user.last_name}}</b></p>
+        <div>
+            <button><a href="{{url_for('ehealth.home')}}">Home</a></button> <br>
+            <br>
+            <button><a href="{{url_for('ehealth.clienr')}}">Register Client</a></button><br>
+            <br>
+            <button><a href="{{url_for('ehealth.logout')}}">log out</a></button>
+        </div>
+    </nav>
+    <div class="backpic">
+        <p class="bigone"><b>REGISTER CLIENT</b></p>
+        <div>
+            <form action="" method="post" class="Clientform">
+                <p>
+                    <b>{{ form.opd_number.label }}</b><br>
+                    {{ form.opd_number(size =32) }}
+                </p>
+                <p>
+                    <b>{{ form.note.label }}</b><br>
+                    {{ form.note }}
+                </p>
+                <p>
+                    <b>{{form.principal_didnose.label}}</b> <br>
+                    {{ form.principal_didnose(size=32)}}
+                </p>
+                <p>
+                    <b>{{ form.created_at.label }}</b><br>
+                    {{ form.created_at(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.drug.label }}</b><br>
+                    {{ form.drug(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.drug_collection_status .label }}</b><br>
+                    {{ form.drug_collection_status  }}
+                </p>
+                <p>
+                    <b>{{ form.admission_status.label }}</b><br>
+                    {{ form.admission_status }}
+                </p>
+                <p>
+                    <b>{{ form.admission_date.label }}</b><br>
+                    {{ form.admission_date(size=32) }}
+                </p>
+                <p>
+                    <b>{{ form.discharge_date.label }}</b><br>
+                    {{ form.discharge_date(size=32) }}
+                </p>
+                {{form.submit()}}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

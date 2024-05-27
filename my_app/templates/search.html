@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% block content%}
+<section>
+    <nav class="testnav">
+        <p><b>{{current_user.first_name}}  {{current_user.last_name}}</b></p>
+        <button><a href="{{url_for('ehealth.home')}}">Home</a></button>
+        <button><a href="{{url_for('ehealth.logout')}}">log out</a></button>
+    </nav>
+    <div class="searchdiv">
+       {% if patient %}
+            {% for patients in patient %}
+                <p><b>Name:</b> {{ patients.first_name }} {{ patients.last_name }}</p>
+                <p><b>OPD Number:</b> {{ patients.opd_number }}</p>
+                <p><b>Nearest Relative:</b> {{ patients.nearest_relative }}</p>
+                <p><b>Emergency Contact:</b> {{ patients.emergency_contact }}</p>
+                <p><b>Date of Birth: </b>{{ patients.date_of_birth }}</p>
+                {% if patients.insurance_status == "yes" %}
+                    <p><b>Insurance Type :</b> {{ patients.insurance_type }}</p>
+                    <p><b>Insurance Number:</b> {{ patients.insurance_number}}</p>
+                {% else %}
+                    <p><b>Insurance Status </b>: None</p>
+                {% endif %}
+            {% endfor %}
+            {% if record %}
+                {% for records in record %}
+                <p><b>Last vist :</b> {{ records.created_at }}</p>
+                <p><b>Principal Diagnose :</b> {{records.principal_didnose}}</p>
+                <p><b>Physician's Note: </b>  {{records.note}}</p>
+                <p><b>Drug :</b> {{records.drug}}</p>
+                <p><b>Drug Collection Status:</b> {{records.drug_collection_status}}</p>
+                {% endfor%}
+            {% endif %}
+        {% else %}
+            <p><b>NO Search Found</b></p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
